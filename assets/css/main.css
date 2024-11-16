@@ -164,6 +164,15 @@ h6 {
   text-transform: uppercase; /* Makes the text all caps for a professional look */
 }
 
+.sitename {
+  font-family: 'League Spartan', sans-serif !important;
+}
+
+.sitename, h2 {
+  font-family: 'League Spartan', sans-serif !important;
+}
+
+
 .container h2 span {
   color: #ffc451; /* Golden color for the dot */
   -webkit-background-clip: unset; /* Ensures the gradient does not affect the dot */
@@ -173,11 +182,12 @@ h6 {
 
 .header .logo {
   line-height: 1;
+  margin-left: -60px;
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  max-height: 66px;
+  margin-right: -15px;
 }
 
 .header .logo h1 {

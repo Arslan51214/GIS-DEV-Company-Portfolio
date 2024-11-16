@@ -153,6 +153,24 @@ h6 {
   z-index: 997;
 }
 
+.sitename {
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Modern and clean font */
+  background: linear-gradient(to right, #FFD700, #FFFACD, #FFFFFF); /* Golden to white */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-transform: uppercase; /* Makes the text all caps for a professional look */
+}
+
+.container h2 span {
+  color: #ffc451; /* Golden color for the dot */
+  -webkit-background-clip: unset; /* Ensures the gradient does not affect the dot */
+  -webkit-text-fill-color: #ffc451; /* Applies the golden color directly to the dot */
+}
+
+
 .header .logo {
   line-height: 1;
 }
@@ -790,7 +808,7 @@ section,
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: white;
   margin: 0;
   font-size: 36px;
   font-weight: 700;
@@ -841,7 +859,7 @@ section,
 }
 
 .hero h2 span {
-  color: #B0C5DE;
+  color: #ffc451;
 }
 
 .hero p {
@@ -865,7 +883,7 @@ section,
 .hero .icon-box i {
   font-size: 32px;
   line-height: 1;
-  color: #3A6F92;
+  color: #ffc451;
 }
 
 .hero .icon-box h3 {
@@ -883,11 +901,11 @@ section,
 }
 
 .hero .icon-box:hover {
-  border-color: #B0C5DE
+  border-color: #ffc451;
 }
 
 .hero .icon-box:hover h3 a {
-  color: #B0C5DE;
+  color: #ffc451;
 }
 
 @media (max-width: 768px) {

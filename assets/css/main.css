@@ -169,7 +169,6 @@ h6 {
 }
 
 .header .logo h1.sitename {
-  font-size: 2.5rem; /* Adjusted for balance */
   font-weight: bold;
   font-family: 'League Spartan', sans-serif;
   margin: 0; /* Removes extra space */
@@ -178,7 +177,8 @@ h6 {
 }
 
 #header .logo span {
-  font-size: 2rem; /* Adjust the size as needed */
+  margin: 0;
+  font-size: 30px; /* Adjust the size as needed */
 }
 
 
@@ -849,7 +849,7 @@ section,
 
 .hero h2 span {
   color: #ffc451;
-}
+  }
 
 .hero p {
   margin: 10px 0 0 0;

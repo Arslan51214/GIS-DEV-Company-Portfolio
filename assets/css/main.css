@@ -924,7 +924,20 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 22px;
+  }
+
+  .hero #imgOne {
+    inset: 0;
+    width: 60px;
+    height: 60px !important;  /* Force height to change */
+  }
+  
+  .hero #imgTwo {
+    inset: 0;
+    width: auto;
+    height: 70px;
+    margin-left: -8px;
   }
 
   .hero p {

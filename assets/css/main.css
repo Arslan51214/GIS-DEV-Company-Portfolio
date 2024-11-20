@@ -170,8 +170,8 @@ h6 {
 }
 
 .header .logo #topLogoOne {
-  max-width: 60px; /* Scale the logo proportionally */
-  max-height: 40px; /* Prevents distortion */
+  max-width: 80px; /* Scale the logo proportionally */
+  max-height: 80px; /* Prevents distortion */
   object-fit: contain; /* Maintains aspect ratio */
 }
 
@@ -226,6 +226,12 @@ h6 {
     order: 2;
     margin: 0 15px 0 0;
     padding: 6px 15px;
+  }
+
+  .header .logo #topLogoOne {
+    max-width: 60px; /* Scale the logo proportionally */
+    max-height: 60px; /* Prevents distortion */
+    object-fit: contain; /* Maintains aspect ratio */
   }
 
   .header .navmenu {

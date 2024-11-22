@@ -962,7 +962,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  margin: 20px 0; /* Add spacing around the heading */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }
@@ -1018,6 +1017,8 @@ section,
     position: relative; /* Avoid absolute unless necessary */
     text-align: center; /* Not required with place-items */
     justify-content: center; /* Not required with place-items */
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -1111,7 +1112,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  margin: 20px 0; /* Add spacing around the heading */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }
@@ -1232,7 +1232,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  margin: 20px 0; /* Add spacing around the heading */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }
@@ -1496,7 +1495,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  margin: 20px 0; /* Add spacing around the heading */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }
@@ -1574,7 +1572,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  margin: 20px 0; /* Add spacing around the heading */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }

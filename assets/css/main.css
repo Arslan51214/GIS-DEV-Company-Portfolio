@@ -978,7 +978,8 @@ section,
 .about #img{
   height: 90%;
   width: 90%;
-  margin-left: 40px;
+  position: relative;
+  left: 40px; /* Moves the image 20px to the right */
 }
 
 .about .content h5{

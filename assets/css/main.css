@@ -963,7 +963,6 @@ section,
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
   margin: 20px 0; /* Add spacing around the heading */
-  text-align: center; /* Center the text */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }
@@ -1101,7 +1100,6 @@ section,
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
   margin: 20px 0; /* Add spacing around the heading */
-  text-align: center; /* Center the text */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }
@@ -1223,7 +1221,6 @@ section,
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
   margin: 20px 0; /* Add spacing around the heading */
-  text-align: center; /* Center the text */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }
@@ -1488,7 +1485,6 @@ section,
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
   margin: 20px 0; /* Add spacing around the heading */
-  text-align: center; /* Center the text */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }
@@ -1567,7 +1563,6 @@ section,
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
   margin: 20px 0; /* Add spacing around the heading */
-  text-align: center; /* Center the text */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
 }

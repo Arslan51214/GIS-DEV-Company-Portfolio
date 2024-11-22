@@ -817,7 +817,6 @@ section,
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: var(--accent-color);
   margin: 4px 10px;
 }
 
@@ -955,8 +954,39 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about .content h3 {
-  font-size: 1.75rem;
+  font-size: 2.2rem;
   font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+}
+
+#about h2{
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #2e2e2e; /* Match the theme color */
+  text-transform: uppercase; /* Make it all caps for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters */
+  margin: 20px 0; /* Add spacing around the heading */
+  text-align: center; /* Center the text */
+  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
+  display: inline-block; /* Keep underline tight around the text */
+}
+
+.about h2::after{
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  margin: 4px -60px;
+}
+
+.about #img{
+  height: 90%;
+  width: 90%;
+  margin-left: 40px;
+}
+
+.about .content h5{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .about .content .fst-italic {
@@ -1067,6 +1097,18 @@ section,
   transition: all ease-in-out 0.3s;
 }
 
+#services .section-title h2{
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #2e2e2e; /* Match the theme color */
+  text-transform: uppercase; /* Make it all caps for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters */
+  margin: 20px 0; /* Add spacing around the heading */
+  text-align: center; /* Center the text */
+  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
+  display: inline-block; /* Keep underline tight around the text */
+}
+
 .services .service-item .icon {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -1175,6 +1217,18 @@ section,
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
+}
+
+#portfolio h2{
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #2e2e2e; /* Match the theme color */
+  text-transform: uppercase; /* Make it all caps for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters */
+  margin: 20px 0; /* Add spacing around the heading */
+  text-align: center; /* Center the text */
+  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
+  display: inline-block; /* Keep underline tight around the text */
 }
 
 .portfolio .portfolio-filters li {
@@ -1430,6 +1484,18 @@ section,
   height: 100%;
 }
 
+#team h2{
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #2e2e2e; /* Match the theme color */
+  text-transform: uppercase; /* Make it all caps for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters */
+  margin: 20px 0; /* Add spacing around the heading */
+  text-align: center; /* Center the text */
+  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
+  display: inline-block; /* Keep underline tight around the text */
+}
+
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
@@ -1495,6 +1561,18 @@ section,
 --------------------------------------------------------------*/
 .contact .info-item+.info-item {
   margin-top: 40px;
+}
+
+#contact h2{
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #2e2e2e; /* Match the theme color */
+  text-transform: uppercase; /* Make it all caps for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters */
+  margin: 20px 0; /* Add spacing around the heading */
+  text-align: center; /* Center the text */
+  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
+  display: inline-block; /* Keep underline tight around the text */
 }
 
 .contact .info-item i {

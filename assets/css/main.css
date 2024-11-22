@@ -1013,12 +1013,14 @@ section,
 @media screen and (max-width: 768px) {
   .about #img {
     display: grid;
-    position: relative; /* Use absolute only if necessary */
-    text-align: center; /* Remove if unnecessary */
-    height: 100%;
-    width: 100%;
+    place-items: center; /* Centers content horizontally and vertically */
+    position: relative; /* Keeps it in the normal flow */
+    height: 90%;
+    width: 90%;
+    margin: 0 auto; /* Ensures the image stays centered horizontally */
   }
 }
+
 
 
 

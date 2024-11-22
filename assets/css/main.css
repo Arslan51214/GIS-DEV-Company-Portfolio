@@ -975,10 +975,9 @@ section,
 }
 
 .about #img{
-  height: 90%;
-  width: 90%;
   position: relative;
-  left: 40px; /* Moves the image 20px to the right */
+    max-width: 100%; /* Prevent image from exceeding container width */
+    max-height: 100%; /* Prevent image from exceeding container height */
 }
 
 .about .content h5{
@@ -1011,16 +1010,14 @@ section,
 }
 
 @media screen and (max-width: 768px) {
-  .about #img {
-    display: grid;
-    place-items: center; /* Centers content horizontally and vertically */
-    position: relative; /* Keeps it in the normal flow */
-    height: 90%;
-    width: 90%;
-    margin: 0 auto; /* Ensures the image stays centered horizontally */
+  .about {
+    display: grid; /* Use grid for centering */
+    place-items: center; /* Center content horizontally and vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Prevent any overflow issues */
   }
 }
-
 
 
 

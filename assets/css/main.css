@@ -1011,6 +1011,17 @@ section,
   margin-bottom: 0;
 }
 
+@media screen {
+  .about #img {
+    display: grid;
+    place-items: center;
+    position: relative; /* Avoid absolute unless necessary */
+    text-align: center; /* Not required with place-items */
+    justify-content: center; /* Not required with place-items */
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/

@@ -933,9 +933,6 @@ section,
   }
 
   .hero #imgOne {
-    inset: 0;
-    width: 40px;
-    height: 40px !important;  /* Force height to change */
   }
   
   .hero #imgTwo {

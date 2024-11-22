@@ -1010,17 +1010,16 @@ section,
   margin-bottom: 0;
 }
 
-@media screen {
+@media screen and (max-width: 768px) {
   .about #img {
     display: grid;
-    place-items: center;
-    position: relative; /* Avoid absolute unless necessary */
-    text-align: center; /* Not required with place-items */
-    justify-content: center; /* Not required with place-items */
+    position: relative; /* Use absolute only if necessary */
+    text-align: center; /* Remove if unnecessary */
     height: 100%;
     width: 100%;
   }
 }
+
 
 
 /*--------------------------------------------------------------

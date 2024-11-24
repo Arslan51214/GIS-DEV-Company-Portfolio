@@ -952,6 +952,10 @@ section,
   font-family: sans-serif;
 }
 
+.about p{
+  overflow: visible;
+}
+
 .about h2::after {
   content: "";
   width: 342px; /* Width of the line */
@@ -1001,6 +1005,16 @@ section,
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
     overflow: hidden; /* Prevent any overflow issues */
+  }
+  .about p{
+    overflow: visible;
+  }
+  .about img{
+    max-height: 50% !important;
+    max-width: 50% !important;
+    place-items: center;
+    align-items: center;
+    align-content: center;
   }
 }
 

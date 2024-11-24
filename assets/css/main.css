@@ -942,11 +942,6 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  font-family: 'Raleway', sans-serif;
-}
 
 .about h2 {
   font-size: 2.5rem; /* Increase font size */
@@ -954,6 +949,7 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
+  font-family: sans-serif;
 }
 
 .about h2::after {
@@ -1099,6 +1095,7 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
+  font-family: sans-serif !important;
 }
 
 
@@ -1218,6 +1215,7 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
+  font-family: sans-serif !important;
 }
 
 .portfolio .portfolio-filters li {
@@ -1449,6 +1447,7 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
+  font-family: sans-serif !important;
 }
 
 .team .team-member .member-img {
@@ -1524,6 +1523,7 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
+  font-family: sans-serif !important;
 }
 
 .contact .info-item i {

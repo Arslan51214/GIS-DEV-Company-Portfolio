@@ -812,14 +812,6 @@ section,
   position: relative;
 }
 
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 1px;
-  display: inline-block;
-  margin: 4px 10px;
-}
-
 .section-title p {
   color: white;
   margin: 0;
@@ -962,18 +954,12 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  border-bottom: none; /* No underline here, handled by ::after */
-  display: inline-block; /* Keep layout tight */
-  padding-bottom: 10px; /* Ensure gap matches the other section */
 }
 
 .about h2::after {
   content: "";
   width: 342px; /* Width of the line */
   height: 3px; /* Match thickness of the underline */
-  background-color: #ffcc00; /* Match the underline color */
-  display: block; /* Make it behave like a block element */
-  margin-top: -5px; /* Add gap between the text and underline */
 }
 
 
@@ -1113,9 +1099,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
-  display: inline-block; /* Keep underline tight around the text */
-  padding-bottom: 5px; /* Add space between the text and the underline */
 }
 
 
@@ -1235,9 +1218,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
-  display: inline-block; /* Keep underline tight around the text */
-  padding-bottom: 5px; /* Add space between the text and the underline */
 }
 
 .portfolio .portfolio-filters li {
@@ -1469,9 +1449,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
-  display: inline-block; /* Keep underline tight around the text */
-  padding-bottom: 5px; /* Add space between the text and the underline */
 }
 
 .team .team-member .member-img {
@@ -1547,9 +1524,6 @@ section,
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
-  display: inline-block; /* Keep underline tight around the text */
-  padding-bottom: 5px; /* Add space between the text and the underline */
 }
 
 .contact .info-item i {

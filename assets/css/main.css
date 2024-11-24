@@ -956,23 +956,26 @@ section,
   font-family: 'Raleway', sans-serif;
 }
 
-#about h2{
+.about h2 {
   font-size: 2.5rem; /* Increase font size */
   font-weight: bold; /* Make it bold */
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
-  border-bottom: 3px solid #ffcc00; /* Add an underline for style */
-  display: inline-block; /* Keep underline tight around the text */
+  border-bottom: none; /* No underline here, handled by ::after */
+  display: inline-block; /* Keep layout tight */
+  padding-bottom: 10px; /* Ensure gap matches the other section */
 }
 
-.about h2::after{
+.about h2::after {
   content: "";
-  width: 120px;
-  height: 1px;
-  display: inline-block;
-  margin: 4px -60px;
+  width: 342px; /* Width of the line */
+  height: 3px; /* Match thickness of the underline */
+  background-color: #ffcc00; /* Match the underline color */
+  display: block; /* Make it behave like a block element */
+  margin-top: -5px; /* Add gap between the text and underline */
 }
+
 
 .about #img{
   position: relative;
@@ -1104,15 +1107,17 @@ section,
   transition: all ease-in-out 0.3s;
 }
 
-#services .section-title h2{
+#services .section-title h2 {
   font-size: 2.5rem; /* Increase font size */
   font-weight: bold; /* Make it bold */
   color: #2e2e2e; /* Match the theme color */
   text-transform: uppercase; /* Make it all caps for emphasis */
   letter-spacing: 2px; /* Add spacing between letters */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
-  display: inline-block; /* Keep underline tight around the text */
+  display: inline-block; /* Keep underline tight around the text */
+  padding-bottom: 5px; /* Add space between the text and the underline */
 }
+
 
 .services .service-item .icon {
   background: var(--accent-color);
@@ -1232,6 +1237,7 @@ section,
   letter-spacing: 2px; /* Add spacing between letters */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
+  padding-bottom: 5px; /* Add space between the text and the underline */
 }
 
 .portfolio .portfolio-filters li {
@@ -1495,6 +1501,7 @@ section,
   letter-spacing: 2px; /* Add spacing between letters */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
+  padding-bottom: 5px; /* Add space between the text and the underline */
 }
 
 .team .team-member .member-img {
@@ -1572,6 +1579,7 @@ section,
   letter-spacing: 2px; /* Add spacing between letters */
   border-bottom: 3px solid #ffcc00; /* Add an underline for style */
   display: inline-block; /* Keep underline tight around the text */
+  padding-bottom: 5px; /* Add space between the text and the underline */
 }
 
 .contact .info-item i {

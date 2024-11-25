@@ -961,6 +961,8 @@ section,
 
 .about #img{
   position: relative;
+    width: 100%; /* Prevent image from exceeding container width */
+    height: 100%; /* Prevent image from exceeding container height */
 }
 
 .about .content h5{
@@ -996,19 +998,17 @@ section,
   .about {
     display: grid; /* Use grid for centering */
     place-items: center; /* Center content horizontally and vertically */
-    height: 100vh; /* Ensure full viewport height */
+    height: 100%; /* Full viewport height */
     width: 100%; /* Full viewport width */
     overflow: hidden; /* Prevent any overflow issues */
   }
-
   .about img {
+    max-height: 100% !important; /* Adjust size */
+    max-width: auto !important; /* Adjust size */
     display: block; /* Ensure block-level behavior */
     margin: 0 auto; /* Center image horizontally */
-    max-width: 100%; /* Ensure image scales to container width */
-    height: auto; /* Maintain aspect ratio */
   }
 }
-
 
 
 

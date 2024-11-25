@@ -1003,7 +1003,7 @@ section,
     overflow: hidden; /* Prevent any overflow issues */
   }
   .about img {
-    max-height: 80% !important; /* Adjust size */
+    max-height: 70% !important; /* Adjust size */
     max-width: 100% !important; /* Adjust size */
     display: block; /* Ensure block-level behavior */
     margin: 0 auto; /* Center image horizontally */

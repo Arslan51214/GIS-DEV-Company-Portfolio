@@ -952,10 +952,6 @@ section,
   font-family: sans-serif;
 }
 
-.about p{
-  overflow: visible;
-}
-
 .about h2::after {
   content: "";
   width: 342px; /* Width of the line */
@@ -1002,21 +998,18 @@ section,
   .about {
     display: grid; /* Use grid for centering */
     place-items: center; /* Center content horizontally and vertically */
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
+    height: 100%; /* Full viewport height */
+    width: 100%; /* Full viewport width */
     overflow: hidden; /* Prevent any overflow issues */
   }
-  .about p{
-    overflow: visible;
-  }
-  .about img{
-    max-height: 50% !important;
-    max-width: 50% !important;
-    place-items: center;
-    align-items: center;
-    align-content: center;
+  .about img {
+    max-height: 80% !important; /* Adjust size */
+    max-width: 80% !important; /* Adjust size */
+    display: block; /* Ensure block-level behavior */
+    margin: 0 auto; /* Center image horizontally */
   }
 }
+
 
 
 

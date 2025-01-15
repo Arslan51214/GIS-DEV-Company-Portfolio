@@ -1,42 +1,65 @@
-const earth = document.querySelector('.earth');
-const parallaxContainer = document.querySelector('.parallax-container'); // Assuming this is your container
+/**
+ * ---------------------------------------
+ * This demo was created using amCharts 4.
+ * 
+ * For more information visit:
+ * https://www.amcharts.com/
+ * 
+ * Documentation is available at:
+ * https://www.amcharts.com/docs/v4/
+ * ---------------------------------------
+ */
 
-let isTouching = false; // Flag to track if touch or mouse is active
-let lastX = 0;
-let lastY = 0;
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
 
-function updatePosition(x, y, centerX, centerY) {
-  const offsetX = (x - centerX) / 20; // Adjust sensitivity for movement
-  const offsetY = (y - centerY) / 20; // Adjust sensitivity for movement
-  earth.style.transform = `translate(${offsetX}px, ${offsetY}px)`; // Move Earth image
-}
+var chart = am4core.create("chartdiv", am4maps.MapChart);
 
-// Mouse movement listener
-document.addEventListener('mousemove', (event) => {
-  if (isTouching) return; // If touch is active, skip mouse events
-  const { clientX, clientY } = event;
-  const centerX = window.innerWidth / 2;
-  const centerY = window.innerHeight / 2;
-  updatePosition(clientX, clientY, centerX, centerY);
-});
+// Set map definition
+chart.geodata = am4geodata_worldLow;
 
-// Touch movement listener
-parallaxContainer.addEventListener('touchstart', (event) => {
-  event.preventDefault(); // Prevent page from scrolling
-  const touch = event.touches[0]; // Get the first touch point
-  lastX = touch.clientX;
-  lastY = touch.clientY;
-  isTouching = true; // Mark touch as active
-}, { passive: false }); // 'passive: false' to allow preventDefault()
+// Set projection
+chart.projection = new am4maps.projections.Orthographic();
+chart.panBehavior = "rotateLongLat";
+chart.deltaLatitude = -20;
+chart.padding(20,20,20,20);
 
-parallaxContainer.addEventListener('touchmove', (event) => {
-  event.preventDefault(); // Prevent page from scrolling
-  const touch = event.touches[0]; // Get the first touch point
-  const centerX = window.innerWidth / 2;
-  const centerY = window.innerHeight / 2;
-  updatePosition(touch.clientX, touch.clientY, centerX, centerY);
-}, { passive: false }); // 'passive: false' to allow preventDefault()
+// Create map polygon series
+var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
-parallaxContainer.addEventListener('touchend', () => {
-  isTouching = false; // Reset the touch flag when touch ends
-});
+// Make map load polygon (like country names) data from GeoJSON
+polygonSeries.useGeodata = true;
+//polygonSeries.include = ["BR", "UA", "MX", "CI"];
+
+// Configure series
+var polygonTemplate = polygonSeries.mapPolygons.template;
+polygonTemplate.tooltipText = "{name}";
+polygonTemplate.fill = am4core.color("#FF6633");
+polygonTemplate.stroke = am4core.color("#000033");
+polygonTemplate.strokeWidth = 0.5;
+polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+polygonTemplate.url = "https://www.datadrum.com/main.php?package={id}";
+polygonTemplate.urlTarget = "_blank";
+
+var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
+graticuleSeries.mapLines.template.line.stroke = am4core.color("#ffffff");
+graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
+graticuleSeries.fitExtent = false;
+
+
+chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;
+chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#ffffff");
+
+// Create hover state and set alternative fill color
+var hs = polygonTemplate.states.create("hover");
+hs.properties.fill = chart.colors.getIndex(0).brighten(-0.5);
+
+let animation;
+setTimeout(function(){
+  animation = chart.animate({property:"deltaLongitude", to:100000}, 20000000);
+}, 3000)
+
+chart.seriesContainer.events.on("down", function(){
+//  animation.stop();
+})

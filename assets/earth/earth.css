@@ -1,15 +1,10 @@
-.parallax-container {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 50%; /* Makes it circular */
-  }
-  
-  .earth {
-    position: absolute;
-    width: 600px; /* Larger than container for the parallax effect */
-    height: 600px;
-    transition: transform 0.05s ease; /* Smooth movement */
-    pointer-events: none; /* Prevents interference with mouse/touch events */
-  }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+max-width:100%;
+  background-color:#000033;
+}

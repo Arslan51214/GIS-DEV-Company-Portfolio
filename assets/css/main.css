@@ -1105,7 +1105,6 @@ section,
   font-family: sans-serif !important;
 }
 
-
 .services .service-item .icon {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -1130,6 +1129,19 @@ section,
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: 0.3s;
+  color: black; /* Set text color to black */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Override Bootstrap's default styles for links inside h3 */
+.services .service-item h3 a {
+  color: black !important; /* Force link color to black */
+  text-decoration: none !important; /* Remove underline */
+}
+
+/* Optional: Hover effect for links */
+.services .service-item h3 a:hover {
+  color: #333; /* Slightly darker shade on hover */
 }
 
 .services .service-item p {
@@ -1142,6 +1154,7 @@ section,
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-10px);
 }
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -1317,6 +1330,8 @@ section,
   opacity: 1;
   bottom: 0;
 }
+
+
 
 /*--------------------------------------------------------------
 # Testimonials Section

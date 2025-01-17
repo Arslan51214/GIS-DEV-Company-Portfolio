@@ -8,18 +8,3 @@ body {
 max-width:100%;
   background-color:#000033;
 }
-
-#chartdiv {
-  width: 100%;
-  height: 500px;
-  max-width: 100%;
-  background-color: #000033;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
-}
-
-#earth-animation.visible #chartdiv {
-  display: block;
-  opacity: 1; /* Fully visible */
-}
-

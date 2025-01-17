@@ -142,7 +142,7 @@
 <script src="https://www.amcharts.com/lib/4/maps.js"></script>
 <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
 <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-<div id="earth-animation" style="display: none;"><div id="chartdiv"></div></div>
+<div id="chartdiv"></div>
           </div>
           <div class="col-lg-6 order-2 order-lg-1 content">
             <div class="twelve">
@@ -415,124 +415,225 @@
 
       <div class="container">
       
-        <div id="carouselExampleCaptions" class="carousel slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 11"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 12"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 13"></button>
+        <section>
+          <div class="container">
+              <div class="carousel">
+                  <input type="radio" name="slides" checked="checked" id="slide-1">
+                  <input type="radio" name="slides" id="slide-2">
+                  <input type="radio" name="slides" id="slide-3">
+                  <input type="radio" name="slides" id="slide-4">
+                  <input type="radio" name="slides" id="slide-5">
+                  <input type="radio" name="slides" id="slide-6">
+                  <input type="radio" name="slides" id="slide-7">
+                  <input type="radio" name="slides" id="slide-8">
+                  <input type="radio" name="slides" id="slide-9">
+                  <input type="radio" name="slides" id="slide-10">
+                  <input type="radio" name="slides" id="slide-11">
+                  <input type="radio" name="slides" id="slide-12">
+                  <ul class="carousel__slides">
+                      <li class="carousel__slide">
+                          <figure>
+                              <div>
+                                  <img src="./assets/img/masonry-portfolio/agronomicshome.jpg" alt="">
+                              </div>
+                              <figcaption>
+                                Agronomics – Islamabad, Pakistan
+                                  <span class="credit"> Developed a digital agriculture platform using React and .NET Core, 
+                                    integrating features like crop tracking and irrigation scheduling.</span>
+                              </figcaption>
+                          </figure>
+                      </li>
+                      <li class="carousel__slide">
+                        <figure>
+                            <div>
+                                <img style="height: 430px;" src="./assets/img/masonry-portfolio/air.jpg" alt="">
+                            </div>
+                            <figcaption>
+                              Air Quality Monitoring Web Application – Sensor and Satellite Analytics
+                                <span class="credit">Using Node.js, PostgreSQL, React, Mapbox, IoT Sensors, Edge Computing, 
+                                  TensorFlow, Docker, AWS Lambda, Git.</span>                            
+                            </figcaption>
+                        </figure>
+                    </li>
+                      <li class="carousel__slide">
+                          <figure>
+                              <div>
+                                  <img src="./assets/img/masonry-portfolio/hanover.jpg" alt="">
+                              </div>
+                              <figcaption>
+                                Hanover Web Application – Data Insights, Routing and Municipality
+                                  <span class="credit">Using  ArcGIS Server, ARKit, ARCore, React, Machine Learning, Docker, AWS S3, 
+                                    GraphQL, Git.</span>                            
+                              </figcaption>
+                          </figure>
+                      </li>
+                      <li class="carousel__slide">
+                          <figure>
+                              <div>
+                                  <img style="height: 430px;" src="./assets/img/masonry-portfolio/dimconnect.jpg" alt="">
+                              </div>
+                              <figcaption>
+                                Dimconnect – Spatially Enabled CMS for FTTH Planners and Management
+                                  <span class="credit">An orchestration of Cloud Computing and AI. Strategize fiber-optic deployments with real-time 
+                                    insights, predictive maintenance alerts, and network traffic predictions using AI-driven 
+                                    simulations.<br/>
+                                    <b>Technologies:</b> React, Nodejs, .NET , AWS, Maplibre, Tileserver, PostGIS, Docker, Git.</span>                            
+                              </figcaption>
+                          </figure>
+                      </li>
+                      <li class="carousel__slide">
+                          <figure>
+                              <div>
+                                  <img src="./assets/img/masonry-portfolio/jaidafinder.jpg" alt="">
+                              </div>
+                              <figcaption>
+                                Jaidadfinder and Homeday.de map -- Real Estate Platform
+                                  <span class="credit">Leveraging gateways for secure transactions and AI to provide users with property price 
+                                    predictions, this platform isn't just about finding properties but anticipating market trends and 
+                                    finding suitable property as per user requirements.<br/>
+                                    <b>Technologies:</b> React, Node.js, Machine Learning, Docker, Git, AWS RDS, GraphQL, 
+                                    PostgreSQL, PostGIS.</span>                            
+                              </figcaption>
+                          </figure>
+                      </li>
+                      <li class="carousel__slide">
+                          <figure>
+                              <div>
+                                  <img style="height: 430px;" src="./assets/img/masonry-portfolio/crop.jpg" alt="">
+                              </div>
+                              <figcaption>
+                                Crop Monitoring Dashboard for Banks – Agriculture Industry and microfinance
+                                  <span class="credit">Agriculture meets the Fourth Industrial Revolution. From drones capturing field imagery to AI 
+                                    analyzing crop health and predicting yield, this dashboard is agriculture's digital future.<br/>
+                                    <b>Technologies:</b> Node.js, Python, Drones, Satellite Data, TensorFlow, React, Mapbox, IoT 
+                                    Sensors, Docker, AWS EC2, Git</span>                            
+                              </figcaption>
+                          </figure>
+                      </li>
+                      <li class="carousel__slide">
+                        <figure>
+                            <div>
+                                <img style="height: 430px;" src="./assets/img/masonry-portfolio/ndrmf-portfolio(2).jpeg.png" alt="">
+                            </div>
+                            <figcaption>
+                              National Disaster Risk Management Fund – Islamabad, Pakistan
+                                <span class="credit"> Developed a WebGIS application using PostGIS, GeoServer, Node.js, and 
+                                  React.js for disaster risk mapping.<br/>
+                                  Assisted in integrating NatCat models for disaster scenario simulations to 
+                                  assess risk exposure</span>                            
+                            </figcaption>
+                        </figure>
+                    </li>
+                  <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img style="height: 430px;" src="./assets/img/masonry-portfolio/hiwifi.jpg" alt="">
+                        </div>
+                        <figcaption>
+                          HiWiFi - DimConnect Project (TÜV) – Remote, Germany
+                            <span class="credit">Developed a GIS dashboard using React, PostGIS, .NET, and Leaflet.js for 
+                              nationwide network visualization.<br/>
+                              Overcame the challenge of implementing vector tiling for efficient rendering and
+                              interaction with large-scale geospatial data across Germany.</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                  <figure>
+                      <div>
+                          <img style="height: 430px;" src="./assets/img/masonry-portfolio/vizualltravel.jpg" alt="">
+                      </div>
+                      <figcaption>
+                        Vizual Travel – Remote, Canada
+                          <span class="credit"> Developed an interactive 3D travel platform using Three.js and React, featuring 
+                            dynamic animations and immersive visualizations for enhanced user 
+                            engagement.</span>                            
+                      </figcaption>
+                  </figure>
+              </li>
+              <li class="carousel__slide">
+                <figure>
+                    <div>
+                        <img style="height: 430px;" src="./assets/img/masonry-portfolio/origofarms(2).jpg" alt="">
+                    </div>
+                    <figcaption>
+                      Origo Farms – Remote, Australia
+                        <span class="credit"> Designed and optimized a PyQGIS and Python script for automating 
+                          meteorological data processing.<br/>
+                          Integrated the solution with existing systems to improve data accessibility and 
+                          streamline workflows.</span>                            
+                    </figcaption>
+                </figure>
+            </li>
+            <li class="carousel__slide">
+              <figure>
+                  <div>
+                      <img style="height: 430px;" src="./assets/img/masonry-portfolio/swellnethome.jpg" alt="">
+                  </div>
+                  <figcaption>
+                    Swellnet – Remote, Australia
+                      <span class="credit"> Integration of complex oceanographic data into predictive models to enhance 
+                        the accuracy of wave forecasts.<br/>
+                        Efficient data processing using NetCDF to handle large datasets and provide 
+                        real-time predictions.</span>                            
+                  </figcaption>
+              </figure>
+          </li>
+          <li class="carousel__slide">
+            <figure>
+                <div>
+                    <img style="height: 430px;" src="./assets/img/masonry-portfolio/r2vhome.jpg" alt="">
+                </div>
+                <figcaption>
+                  R2V – Rawalpindi, Pakistan
+                    <span class="credit">Developed a land record management dashboard for BOR Balochistan.<br/>
+                      Implemented vector-based visualization techniques for interactive boundary 
+                      mapping</span>                            
+                </figcaption>
+            </figure>
+        </li>
+                  </ul>    
+                  <ul class="carousel__thumbnails">
+                      <li>
+                          <label for="slide-1"><img src="./assets/img/masonry-portfolio/agronomicshome.jpg" alt=""></label>
+                      </li>
+                      <li>
+                          <label for="slide-2"><img src="./assets/img/masonry-portfolio/air.jpg" alt=""></label>
+                      </li>
+                      <li>
+                          <label for="slide-3"><img src="./assets/img/masonry-portfolio/hanover.jpg" alt=""></label>
+                      </li>
+                      <li>
+                          <label for="slide-4"><img src="./assets/img/masonry-portfolio/dimconnect.jpg" alt=""></label>
+                      </li>
+                      <li>
+                          <label for="slide-5"><img src="./assets/img/masonry-portfolio/jaidafinder.jpg" alt=""></label>
+                      </li>
+                      <li>
+                          <label for="slide-6"><img src="./assets/img/masonry-portfolio/crop.jpg" alt=""></label>
+                      </li>
+                      <li>
+                        <label for="slide-7"><img src="./assets/img/masonry-portfolio/ndrmf-portfolio(2).jpeg.png" alt=""></label>
+                    </li>
+                    <li>
+                      <label for="slide-8"><img src="./assets/img/masonry-portfolio/hiwifi.jpg" alt=""></label>
+                  </li>
+                  <li>
+                    <label for="slide-9"><img src="./assets/img/masonry-portfolio/vizualltravel.jpg" alt=""></label>
+                </li>
+                <li>
+                  <label for="slide-10"><img src="./assets/img/masonry-portfolio/origofarms(2).jpg" alt=""></label>
+              </li>
+              <li>
+                <label for="slide-11"><img src="./assets/img/masonry-portfolio/swellnethome.jpg" alt=""></label>
+            </li>
+            <li>
+              <label for="slide-12"><img src="./assets/img/masonry-portfolio/r2vhome.jpg" alt=""></label>
+          </li>
+                  </ul>
+              </div>
           </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/agronomicshome.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Agronomics - Islamabad, Pakistan</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Using React and .NET Core</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/air.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">AQ Monitoring Web Application - Sensor and Satellite Analyst</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Using Node.JS, PostgreSQL, React, Mapbox, IoT Sensors, Edge Computing, Tensor Flow, Docker, AWS, Lambda, Git</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/crop.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Crop Monitoring Dashboard for Banks - Agriculture Industry and Microfinance</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Using Node.JS, Python, Drones, Satellite Data, TensorFlow, React, Mapbox, IoT, Sensors, Docker, AWS EC2, Git</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/dimconnect.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Dimconnect - Spatially Enabled CMS for FTTH Planners and Management</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Using React, NodeJS, .NET, AWS, Maplibre, Tileserver, PostGIS, Docker, Git</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/hanover.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Hanover Web Application - Data Insights, Routing and Municipallity</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Using ArcGIS Server, ARKit, ARCore, React, Machine Learning, Docker, AWS S3, GraphQL, Git</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/jaidafinder.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Jaidadfinder and Homeday.de map - Real Estate Platform</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Using React, Node.js, Machine Learning, Docker, Git, AWS RDS, GraphQL, PostgreSQL, PostGIS</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/origofarms.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Origo Farms - Remote, Australia</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Using PyQGIS and Python</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/r2vhome.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">R2V - Rawalpindi, Pakistan</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Developed a land record management dashboard for BOR Balochistan</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/swellnet(2).jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Swellnet - Remote, Australia</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Designed  and optimized a PyQGIS and Python script for automating</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/vizualltravel.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Vizual Travel - Remote, Canada</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Developed an interactive 3D travel platform using Three.JS and React featuring dynamic animations and immersive visualization for enhanced user engagement</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/hiwifi.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">HiWiFi - DimConnect Project(TUV) - Remote, Germany</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Developed a GIS dashboard using React, PostGIS, .NET and Leaflet.js for nationwide network visualization</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/metavystic-portfolio(2).png" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Metavystic - Islamabad, Pakistan</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Developed a centralized geospatial data repositry for FAQ using PostGIS, React, GeoServer, and .NET</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img style="height: 600px;" src="./assets/img/masonry-portfolio/ndrmf-portfolio(2).jpeg.png" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 style="text-decoration: underline; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">NDRMF - Islamabad, Pakistan</h5>
-                <p style="font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 0px; background-color: black;">Developed a WebGIS application using PostGIS, GeoServer, Node.js and React.js for disaster risk mapping</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+      </section>
 
       </div>
 

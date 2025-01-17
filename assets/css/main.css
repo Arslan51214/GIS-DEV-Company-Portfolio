@@ -1727,6 +1727,28 @@ h1 em {
 }
 
 
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+    
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+    
+  > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+  }
+}
+
+
 section {
     background: #F4F4F4;
     padding: 50px 0;
@@ -1754,7 +1776,6 @@ section {
         padding: 0;
         position: absolute;
         
-
         &:nth-of-type(12):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -1100%; }
         &:nth-of-type(11):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -1000%; }
         &:nth-of-type(10):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -900%; }
@@ -1780,174 +1801,160 @@ section {
         &:nth-of-type(10):checked ~ .carousel__thumbnails li:nth-of-type(10) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
         &:nth-of-type(11):checked ~ .carousel__thumbnails li:nth-of-type(11) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
         &:nth-of-type(12):checked ~ .carousel__thumbnails li:nth-of-type(12) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-      }
-}
-
-.carousel__slides {
-    position: relative;
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    display: flex;
-}
-
-.carousel__slide {
-    position: relative;
-    display: block;
-    flex: 1 0 100%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 300ms ease-out;
-    vertical-align: top;
-    box-sizing: border-box;
-    white-space: normal;
-    
-    figure {
-        display: flex;
-        margin: 0;
-    }
-    
-    div {
-        @include aspect-ratio(3, 2);
-        width: 100%;
-    }
-    
-    img {
-        display: block;
-        flex: 1 1 auto;
-        object-fit: cover;
-        width: 100%; /* Ensures the image fills the width of its container */
-  height: 600px; /* Ensures the image fills the height of its container */
-  display: block; /* Removes any extra spacing */
-    }
-    
-    figcaption {
-        align-self: flex-end;
-        padding: 20px 20px 0 20px;
-        flex: 0 0 auto;
-        width: 25%;
-        min-width: 150px;
-    }
-    
-    .credit {
-        margin-top: 1rem;
-        color: rgba(0, 0, 0, 0.5);
-        display: block;        
-    }
-    
-    &.scrollable {
-        overflow-y: scroll;
-    }
-}
-
-.carousel__thumbnails {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    
-    margin: 0 -10px;
-    
-    .carousel__slides + & {
-        margin-top: 20px;
-    }
-    
-    li {        
-        flex: 1 1 auto;
-        max-width: calc((100% / 10) - 20px);  
-        margin: 0 10px;
-        transition: all 300ms ease-in-out;
-        height: calc((100% / 10) - 20px);
-    }
-    
-    label {
-        display: block;
-        @include aspect-ratio(1,1);
-        
-                  
-        &:hover,
-        &:focus {
-            cursor: pointer;
-            
-            img {
-                box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
-                transition: all 300ms ease-in-out;
-            }
         }
     }
-    
-    img {
-        display: block;
-        width: 100%;
-        height: 60px;
-        object-fit: cover;
-    }
+
+
+    .carousel__slides {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      display: flex;
+  }
+  
+  .carousel__slide {
+      position: relative;
+      display: block;
+      flex: 1 0 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transition: all 300ms ease-out;
+      vertical-align: top;
+      box-sizing: border-box;
+      white-space: normal;
+      
+      figure {
+          display: flex;
+          margin: 0;
+          width: 100%;
+          height: 100%;
+      }
+      
+      div {
+          width: 100%;
+          height: 100%;
+      }
+      
+      img {
+          display: block;
+          width: 100%; /* Ensures the image stretches to fit horizontally */
+          height: 100%; /* Ensures the image stretches to fit vertically */
+          object-fit: cover; /* Ensures the image maintains aspect ratio while filling the container */
+      }
+      
+      figcaption {
+          align-self: flex-end;
+          padding: 20px 20px 0 20px;
+          flex: 0 0 auto;
+          width: 25%;
+          min-width: 150px;
+      }
+      
+      .credit {
+          margin-top: 1rem;
+          color: rgba(0, 0, 0, 0.5);
+          display: block;        
+      }
+      
+      &.scrollable {
+          overflow-y: scroll;
+      }
+  }
+
+
+.carousel__thumbnails {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 5px; /* Adds spacing between thumbnails */
+  margin-top: 20px;
+
+  li {
+      flex: 0 0 calc(100% / 12 - 20px); /* Show 16 thumbnails per row (smaller size) */
+      max-width: calc(100% / 12 - 20px); /* Ensures smaller and consistent size */
+      margin: 0 5px;
+      transition: all 300ms ease-in-out;
+      overflow: hidden; /* Hide overflow for consistent sizing */
+      
+      /* Outline when selected */
+      &.selected {
+          border-color: #007BFF; /* Blue outline when selected */
+      }
+  }
+
+  label {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+      &:hover,
+      &:focus {
+          cursor: pointer;
+
+          img {
+              box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+              transform: scale(1.05);
+              transition: all 300ms ease-in-out;
+          }
+      }
+  }
+
+  img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures image fills the container while maintaining aspect ratio */
+  }
 }
 
-/* Media Query for Mobile (600px) */
-@media (max-width: 600px) {
-  .carousel__thumbnails {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+@media (max-width: 768px) {
+  .carousel__thumbnails li {
+      flex: 0 0 calc(100% / 11 - 20px); /* Show 10 thumbnails per row on tablets */
+      max-width: calc(100% / 11 - 20px);
+  }
+
+  .carousel__slide figcaption {
+    font-size: 10px;
+    padding-left: 10px; /* Adds space between the image and the text */
+    align-items: flex-start; /* Align the text to the top */
+}
+
+  .carousel__slide {
     display: flex;
-    
-    margin: 0 -10px;
-    
-    img {
-        display: block;
-        width: 100%;
-        height: 30px;
-        object-fit: cover;
-    }
+    justify-content: center;  /* Horizontally center the image */
+    align-items: center;      /* Vertically center the image */
+    overflow: hidden;         /* Prevent overflow */
+    width: 100%;              /* Full width of the parent container */
+    height: 300px;            /* Fixed height */
 }
-}
-
-/* Media Query for Tablets (600px to 900px) */
-@media (max-width: 900px) {
-  .carousel__thumbnails {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    
-    margin: 0 -10px;
-    
-    img {
-        display: block;
-        width: 100%;
-        height: 40px;
-        object-fit: cover;
-    }
-}
-}
-
 
 .carousel__slide img {
-  width: 100%; /* Ensures the image fills the width of its container */
-  height: 100%; /* Ensures the image fills the height of its container */
-  object-fit: cover; /* Keeps the image aspect ratio intact and fills the container */
-  display: block; /* Removes any extra spacing */
+    max-width: 100%;          /* Ensure the image fits within the container */
+    max-height: 600px;         /* Ensure the image fits within the container */
 }
 
-.carousel__slide div {
-  position: relative;
-  width: 100%; /* Full width */
-  overflow: hidden; /* Ensures no content overflows */
+
+
 }
 
-.carousel__slide figure {
-  margin: 0;
-  position: relative;
-  height: 100%; /* Ensures the figure is constrained to the set aspect ratio */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 480px) {
+  .carousel__thumbnails li {
+      flex: 0 0 calc(100% / 7 - 5px); /* Show 7 thumbnails per row on mobile */
+      max-width: calc(100% / 7 - 5px);
+  }
 }
+
+
+
 
 
 /*--------------------------------------------------------------

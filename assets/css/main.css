@@ -68,7 +68,6 @@ body {
 }
 
 a {
-  color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -1168,6 +1167,26 @@ section,
   transform: translateY(-10px);
 }
 
+/* Specifically target links inside the service-item h3 */
+.services .service-item h3 a {
+  text-decoration: none !important; /* Remove underline */
+  color: black !important; /* Ensure the color is black */
+}
+
+/* Handle hover, focus, and active states */
+.services .service-item h3 a:hover,
+.services .service-item h3 a:focus,
+.services .service-item h3 a:active {
+  text-decoration: none !important; /* Remove underline */
+  color: #333 !important; /* Optional hover color */
+}
+
+/* Disable any pseudo-element styling */
+.services .service-item h3 a::after {
+  content: none !important;
+}
+  
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -1561,6 +1580,7 @@ h1 em {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .team .team-member .social a:hover {
@@ -1990,6 +2010,7 @@ section {
   padding: 12px 15px;
   margin-top: 15px;
   transition: 0.3s;
+  text-decoration: none !important;
 }
 
 .service-details .services-list a:first-child {
